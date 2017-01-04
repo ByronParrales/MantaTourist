@@ -1,6 +1,7 @@
 package com.facci.manta_tourist;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,7 @@ public class Inicio extends AppCompatActivity {
         etContraseña = (EditText)findViewById(R.id.etContraseña);
         cbdata =(CheckBox)findViewById(R.id.cbdata);
 
+
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,5 +47,16 @@ public class Inicio extends AppCompatActivity {
                 startActivity(intent01);
             }
         });
+
+
+
+    }
+    public void facebook (View view){
+        Intent facebookintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com"));
+        startActivity(facebookintent);
+    }
+    public void browser (View view){
+        Intent browserintent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.gmail.com"));
+        startActivity(browserintent);
     }
 }

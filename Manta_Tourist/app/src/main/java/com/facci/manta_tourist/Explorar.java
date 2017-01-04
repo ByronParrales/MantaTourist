@@ -11,14 +11,13 @@ import android.widget.TextView;
 public class Explorar extends AppCompatActivity {
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8;
     TextView tv1;
-    ImageView imageView, imageView1, imageView2, imageView3, imageView4, imageView5, imageView6,imageView7;
+    ImageView  imageView1, imageView2, imageView3, imageView4, imageView5, imageView6,imageView7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explorar);
 
-        imageView = (ImageView)findViewById(R.id.imageView);
         imageView1 = (ImageView)findViewById(R.id.imageView1);
         imageView2 = (ImageView)findViewById(R.id.imageView2);
         imageView3 = (ImageView)findViewById(R.id.imageView3);
@@ -51,6 +50,14 @@ public class Explorar extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Explorar.this, Mapa.class);
                 startActivity(intent);
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(Explorar.this, Mapa1.class);
+                startActivity(intent1);
             }
         });
 

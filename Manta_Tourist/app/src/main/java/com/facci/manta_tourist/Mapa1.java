@@ -11,14 +11,14 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Mapa extends FragmentActivity implements OnMapReadyCallback {
+public class Mapa1 extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mapa);
+        setContentView(R.layout.activity_mapa1);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -40,8 +40,8 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng bar = new LatLng(-0.945345, -80.731017);
-        mMap.addMarker(new MarkerOptions().position(bar).title("BAR").snippet("Este es un Bar").icon(BitmapDescriptorFactory.fromResource(R.drawable.mapa1)).draggable(true));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(bar));
+        LatLng playa = new LatLng(-0.940290, -80.730700);
+        mMap.addMarker(new MarkerOptions().position(playa).title("Playa").snippet("Este es una Playa").icon(BitmapDescriptorFactory.fromResource(R.drawable.mapa1)).draggable(true));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(playa));
     }
 }
